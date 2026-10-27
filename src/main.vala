@@ -175,9 +175,9 @@ namespace SwayNotificationCenter {
             bool visible = control_center.get_visibility ();
 
             for (uint i = 0; i < removed; i++) {
-                unowned BlankWindow win = blank_windows.index (position + i);
+                unowned BlankWindow win = blank_windows.index (position);
                 win.close ();
-                blank_windows.remove_index (position + i);
+                blank_windows.remove_index (position);
             }
 
             for (uint i = 0; i < added; i++) {
